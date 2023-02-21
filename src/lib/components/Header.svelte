@@ -34,8 +34,8 @@
 					<a
 						class={`${
 							$page.url.pathname === url ? 'bg-red-400/10' : ''
-						} ${'flex aspect-square items-center rounded-md p-2'} hover:${
-							$page.url.pathname === url ? 'bg-red-400/10' : 'bg-zinc-400/10'
+						} ${'flex aspect-square items-center rounded-md p-2'} ${
+							$page.url.pathname === url ? '' : 'hover:bg-zinc-400/10'
 						}`}
 						href={url}
 					>
