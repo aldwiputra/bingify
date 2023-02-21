@@ -1,12 +1,18 @@
-<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg
+	width="96"
+	height="96"
+	viewBox="0 0 96 96"
+	fill="none"
+	xmlns="http://www.w3.org/2000/svg"
+>
 	<path
-		class="fill-red-600"
+		fill="#dc2626"
 		fill-rule="evenodd"
 		clip-rule="evenodd"
 		d="M48 96C74.5098 96 96 74.5098 96 48C96 21.4902 74.5098 0 48 0H0V48C0 74.5098 21.4902 96 48 96Z"
 	/>
 	<path
-		class="fill-red-500"
+		fill="#ef4444"
 		fill-rule="evenodd"
 		clip-rule="evenodd"
 		d="M24 89.5786C38.3472 81.2793 48 65.7671 48 48C48 21.4902 26.5098 0 0 0V48C0 65.7671 9.65283 81.2793 24 89.5786Z"
