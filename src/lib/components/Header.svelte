@@ -30,12 +30,15 @@
 	<nav class="fixed bottom-0 left-0 w-full bg-zinc-800 py-3 px-10 md:static md:w-fit md:p-0">
 		<ul class="mx-auto flex w-fit items-center gap-10 md:gap-6">
 			{#each menuItems as { label, url }}
-				<li
-					class={`${
-						$page.url.pathname === url ? 'bg-red-400/10' : ''
-					} ${'flex aspect-square items-center rounded-md p-2'}`}
-				>
-					<a href={url}>
+				<li>
+					<a
+						class={`${
+							$page.url.pathname === url ? 'bg-red-400/10' : ''
+						} ${'flex aspect-square items-center rounded-md p-2'} hover:${
+							$page.url.pathname === url ? 'bg-red-400/10' : 'bg-zinc-400/10'
+						}`}
+						href={url}
+					>
 						<Icon
 							type={label}
 							mainColor={$page.url.pathname === url ? 'fill-red-400' : 'fill-zinc-400'}

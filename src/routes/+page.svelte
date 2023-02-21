@@ -1,3 +1,3 @@
 <svelte:head>
-	<title>Bingify - Home</title>
+	<title>Bingify | Home</title>
 </svelte:head>
