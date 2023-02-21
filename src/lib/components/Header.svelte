@@ -28,7 +28,7 @@
 	</a>
 
 	<nav class="fixed bottom-0 left-0 w-full bg-zinc-800 py-3 px-10 md:static md:w-fit md:p-0">
-		<ul class="mx-auto flex w-fit items-center gap-10 md:gap-6">
+		<ul class="mx-auto flex w-fit items-center gap-10 md:gap-4">
 			{#each menuItems as { label, url }}
 				<li>
 					<a
@@ -43,7 +43,7 @@
 							type={label}
 							mainColor={$page.url.pathname === url ? 'fill-red-400' : 'fill-zinc-400'}
 							accentColor={$page.url.pathname === url ? 'fill-red-500' : 'fill-zinc-500'}
-							width="w-7"
+							width="w-6"
 						/>
 					</a>
 				</li>
@@ -51,7 +51,7 @@
 		</ul>
 	</nav>
 
-	<button>
-		<Icon type="search" mainColor="fill-zinc-500" accentColor="fill-zinc-400" width="w-7" />
+	<button class="p-2 hover:bg-zinc-400/10 rounded-md">
+		<Icon type="search" mainColor="fill-zinc-500" accentColor="fill-zinc-400" width="w-6" />
 	</button>
 </header>
