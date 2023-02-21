@@ -15,19 +15,25 @@
 	];
 </script>
 
-<header class="dark:bg-zinc-800 p-6 flex items-center justify-between">
-	<a href="/">
+<header
+	class=" mx-auto flex max-w-screen-2xl items-center justify-between p-6 dark:bg-zinc-800 md:my-6 md:rounded-lg md:py-4 md:px-6"
+>
+	<a class="whitespace-nowrap" href="/">
 		<Icon type="logo" mainColor="fill-red-600" accentColor="fill-red-500" width="w-7" />
-		<h1 class="text-zinc-400 text-2xl font-semibold inline-block align-middle ml-1.5 ">bingify</h1>
+		<h1
+			class="ml-1.5 inline-block align-middle text-2xl font-semibold text-zinc-400 md:hidden lg:inline-block "
+		>
+			bingify
+		</h1>
 	</a>
 
-	<nav class="fixed bottom-0 left-0 w-full bg-zinc-800 py-3 px-10">
-		<ul class="flex items-center gap-10 w-fit mx-auto">
+	<nav class="fixed bottom-0 left-0 w-full bg-zinc-800 py-3 px-10 md:static md:w-fit md:p-0">
+		<ul class="mx-auto flex w-fit items-center gap-10 md:gap-6">
 			{#each menuItems as { label, url }}
 				<li
 					class={`${
 						$page.url.pathname === url ? 'bg-red-400/10' : ''
-					} ${'p-2 rounded-md aspect-square flex items-center'}`}
+					} ${'flex aspect-square items-center rounded-md p-2'}`}
 				>
 					<a href={url}>
 						<Icon
@@ -42,5 +48,7 @@
 		</ul>
 	</nav>
 
-	<Icon type="search" mainColor="fill-zinc-500" accentColor="fill-zinc-400" width="w-7" />
+	<button>
+		<Icon type="search" mainColor="fill-zinc-500" accentColor="fill-zinc-400" width="w-7" />
+	</button>
 </header>
