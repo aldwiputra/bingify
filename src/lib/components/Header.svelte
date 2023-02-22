@@ -16,17 +16,17 @@
 </script>
 
 <header
-	class="2xl:mx-auto flex max-w-screen-2xl items-center justify-between p-4 md:p-5 bg-zinc-800 md:m-6 md:rounded-lg md:py-4 md:px-6">
+	class="mx-auto flex max-w-screen-2xl items-center justify-between bg-zinc-800 p-4 md:rounded-lg md:p-5 md:py-4 md:px-6">
 	<a class="group whitespace-nowrap" href="/">
 		<Icon type="logo" mainColor="fill-red-600" accentColor="fill-red-500" width="w-6" />
 		<h1
-			class="ml-1.5 inline-block text-xl font-semibold text-zinc-400 leading-none align-middle md:hidden lg:inline-block group-hover:text-zinc-200">
+			class="ml-1.5 inline-block align-middle text-xl font-semibold leading-none text-zinc-400 group-hover:text-zinc-200 md:hidden lg:inline-block">
 			bingify
 		</h1>
 	</a>
 
 	<nav
-		class="fixed bottom-0 left-0 w-full bg-zinc-800 md:bg-transparent py-4 md:static md:w-fit md:p-0">
+		class="fixed bottom-0 left-0 w-full bg-zinc-800 py-4 md:static md:w-fit md:bg-transparent md:p-0">
 		<ul class="mx-auto flex w-fit items-center gap-6 sm:gap-8 md:gap-4">
 			{#each menuItems as { label, url }}
 				<li>
@@ -48,7 +48,7 @@
 		</ul>
 	</nav>
 
-	<button class="p-2 hover:bg-zinc-400/10 rounded-md">
+	<button class="rounded-md p-2 hover:bg-zinc-400/10">
 		<Icon type="search" mainColor="fill-zinc-500" accentColor="fill-zinc-400" width="w-6" />
 	</button>
 </header>
