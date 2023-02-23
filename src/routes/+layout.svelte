@@ -11,13 +11,18 @@
 		rel="stylesheet" />
 </svelte:head>
 
-<div class="md:p-6">
-	<Header />
-	<slot />
+<div
+	class=" mx-auto grid max-w-screen-xl auto-rows-auto grid-cols-1 md:gap-4 md:p-6 lg:grid-cols-10 lg:gap-7">
+	<div class="w-full place-self-start">
+		<Header />
+	</div>
+	<main class="lg:col-start-2 lg:col-end-11 ">
+		<slot />
+	</main>
 </div>
 
 <style lang="postcss">
 	:global(body) {
-		@apply bg-zinc-900;
+		@apply bg-gray-900;
 	}
 </style>
