@@ -2,9 +2,17 @@
 	export let title: string;
 </script>
 
-<section class="mt-4 pl-4 md:mt-8 md:pl-0 lg:mt-10">
-	<h3 class="text-lg font-semibold text-gray-200 md:text-xl lg:text-2xl">{title}</h3>
-	<div class="mt-2 flex gap-4 overflow-x-scroll pb-3 md:mt-4 md:gap-6 md:pb-6">
+<section
+	class="mt-4 pl-4 
+				md:mt-8 md:pl-0 lg:mt-10">
+	<h3
+		class="text-lg font-semibold text-gray-200 
+					md:text-xl lg:text-2xl">
+		{title}
+	</h3>
+	<div
+		class="mt-2 flex gap-4 overflow-x-scroll pb-3 
+					md:mt-4 md:gap-6 md:pb-6">
 		<slot />
 	</div>
 </section>

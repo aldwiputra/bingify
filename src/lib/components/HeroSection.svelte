@@ -6,12 +6,16 @@
 
 <div class="grid max-h-[24rem] grid-cols-1 grid-rows-1 overflow-hidden md:rounded-lg">
 	<img
-		class="col-span-full row-span-full h-full w-full object-cover object-top opacity-[.20] blur-md saturate-50 md:rounded-md"
+		class="col-span-full row-span-full h-full w-full 
+					object-cover object-top opacity-[.20] 
+					blur-md saturate-50 md:rounded-md"
 		src={`https://image.tmdb.org/t/p/w780/${mainMovie.backdrop_path}`}
 		alt="" />
 
 	<article
-		class="z-10 col-span-full row-span-full my-10 mx-4 flex h-fit w-fit items-stretch gap-4 place-self-center md:gap-6">
+		class="z-10 col-span-full row-span-full 
+					my-10 mx-4 flex h-fit w-fit items-stretch 
+					gap-4 place-self-center md:gap-6">
 		<img
 			class="w-28 rounded-md sm:w-40"
 			src={`https://image.tmdb.org/t/p/w185/${mainMovie.poster_path}`}
@@ -19,7 +23,8 @@
 
 		<div class=" flex flex-col justify-between self-stretch">
 			<span
-				class="border-1 flex w-fit items-center gap-1 rounded-full border border-solid border-sky-500 bg-sky-500/10 px-3 py-1  text-sky-500">
+				class="border-1 flex w-fit items-center gap-1 rounded-full border border-solid 
+							border-sky-500 bg-sky-500/10 px-3 py-1  text-sky-500">
 				<svg
 					class="mr-1 w-1.5 align-middle"
 					viewBox="0 0 24 26"
@@ -33,15 +38,22 @@
 			</span>
 
 			<h2
-				class="text-md mt-2 max-w-[15ch] overflow-hidden text-ellipsis whitespace-nowrap font-extrabold text-zinc-200 sm:text-2xl md:max-w-[22ch]">
+				class="text-md mt-2 max-w-[15ch] 
+							overflow-hidden text-ellipsis whitespace-nowrap 
+							font-extrabold text-zinc-200 sm:text-2xl md:max-w-[22ch]">
 				{mainMovie.title}
 			</h2>
 
-			<div class="mt-2 flex items-center gap-3 text-xs font-bold text-zinc-200 sm:gap-4 sm:text-sm">
+			<div
+				class="mt-2 flex items-center gap-3 
+							text-xs font-bold text-zinc-200 
+							sm:gap-4 sm:text-sm">
 				<p>
 					{mainMovie.release_date.split('-')[0]}
 				</p>
-				<span class="rounded-md bg-zinc-200 py-0.5 px-1.5 text-[10px] text-zinc-900 sm:text-[11px]">
+				<span
+					class="rounded-md bg-zinc-200 py-0.5 px-1.5 
+								text-[10px] text-zinc-900 sm:text-[11px]">
 					{mainMovie.adult ? 'R' : 'PG-13'}
 				</span>
 				<span class="flex items-center gap-1">
@@ -59,7 +71,9 @@
 			</div>
 
 			<p
-				class="mt-2 max-w-[20ch] text-xs leading-normal text-gray-400 line-clamp-4 sm:max-w-[22ch] sm:text-base sm:line-clamp-5  md:max-w-[28ch]">
+				class="mt-2 max-w-[20ch] 
+							text-xs leading-normal text-gray-400 line-clamp-4 
+							sm:max-w-[22ch] sm:text-base sm:line-clamp-5 md:max-w-[28ch]">
 				{mainMovie.overview}
 			</p>
 		</div>
