@@ -18,12 +18,21 @@
 
 	div::-webkit-scrollbar {
 		height: 0.4em;
+		cursor: pointer;
+	}
+
+	div::-webkit-scrollbar:hover {
 		@apply bg-gray-800;
 	}
 
-	div::-webkit-scrollbar-thumb {
+	div:hover::-webkit-scrollbar-thumb {
 		@apply bg-gray-700;
-		/* @apply border border-solid border-gray-500; */
+	}
+
+	div::-webkit-scrollbar-thumb {
+		@apply bg-gray-700/0;
 		border-radius: 1rem;
+	}
+	div::-webkit-scrollbar-thumb:hover {
 	}
 </style>
