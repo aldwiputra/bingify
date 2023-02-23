@@ -25,4 +25,14 @@
 	:global(body) {
 		@apply bg-gray-900;
 	}
+
+	:global(body::-webkit-scrollbar) {
+		width: 0.5em;
+		@apply bg-gray-800;
+	}
+
+	:global(body::-webkit-scrollbar-thumb) {
+		@apply bg-gray-700;
+		border-radius: 1rem;
+	}
 </style>

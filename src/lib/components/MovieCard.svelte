@@ -6,7 +6,7 @@
 
 <article>
 	<img
-		class="min-w-[7rem] rounded-md sm:min-w-[8rem] md:min-w-[10rem]"
+		class="min-w-[7rem] rounded-md sm:min-w-[8rem] md:min-w-[10rem] lg:min-w-[11rem]"
 		src={`https://image.tmdb.org/t/p/w185${data.poster_path}`}
 		alt="" />
 	<!-- <h3>{data.title}</h3> -->

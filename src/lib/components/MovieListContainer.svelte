@@ -25,6 +25,5 @@
 		@apply bg-gray-700;
 		/* @apply border border-solid border-gray-500; */
 		border-radius: 1rem;
-		height: 4px;
 	}
 </style>

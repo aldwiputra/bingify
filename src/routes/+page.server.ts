@@ -19,11 +19,31 @@ export const load = (async ({ fetch }) => {
 		);
 		const response = await movies.json();
 
-		return response.results.slice(0, 15);
+		return response.results;
+	}
+
+	async function fetchPopularMovies(): Promise<Movie[]> {
+		const movies = await fetch(
+			`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.TMDB_API_KEY}&page=1`
+		);
+		const response = await movies.json();
+
+		return response.results;
+	}
+
+	async function fetchUpcomingMovies(): Promise<Movie[]> {
+		const movies = await fetch(
+			`https://api.themoviedb.org/3/movie/upcoming?api_key=${process.env.TMDB_API_KEY}&page=1`
+		);
+		const response = await movies.json();
+
+		return response.results;
 	}
 
 	return {
 		mainMovie: fetchNowPlayingMovies(),
-		topRatedMovies: fetchTopRatedMovies()
+		topRatedMovies: fetchTopRatedMovies(),
+		popularMovies: fetchPopularMovies(),
+		upcomingMovies: fetchUpcomingMovies()
 	};
 }) satisfies PageServerLoad;
