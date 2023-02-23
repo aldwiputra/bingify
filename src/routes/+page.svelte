@@ -17,3 +17,13 @@
 		<MovieCard data={movieItem} />
 	{/each}
 </MovieListContainer>
+<MovieListContainer title="Top Rated Movies">
+	{#each data.topRatedMovies as movieItem}
+		<MovieCard data={movieItem} />
+	{/each}
+</MovieListContainer>
+<MovieListContainer title="Top Rated Movies">
+	{#each data.topRatedMovies as movieItem}
+		<MovieCard data={movieItem} />
+	{/each}
+</MovieListContainer>

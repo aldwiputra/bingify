@@ -16,7 +16,7 @@
 </script>
 
 <header
-	class="flex items-center justify-between bg-gray-800/50 p-4 md:rounded-lg md:p-5 md:py-4 md:px-6 lg:flex-col lg:justify-start lg:gap-32 lg:py-8 lg:px-0">
+	class="sticky top-4 flex items-center justify-between bg-gray-800/50 p-4 md:rounded-lg md:p-5 md:py-4 md:px-6 lg:flex-col lg:justify-start lg:gap-32 lg:py-8 lg:px-0">
 	<a class="group whitespace-nowrap" href="/">
 		<Icon
 			type="logo"
