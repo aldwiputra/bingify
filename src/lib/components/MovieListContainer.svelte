@@ -3,16 +3,16 @@
 </script>
 
 <section
-	class="mt-4 pl-4 
-				md:mt-8 md:pl-0 lg:mt-10">
+	class="mt-10 pl-4 
+				md:mt-12 md:pl-0 lg:mt-16">
 	<h3
-		class="text-lg font-semibold text-gray-200 
-					md:text-xl lg:text-2xl">
+		class="text-xl font-bold text-gray-200 
+					md:text-2xl lg:text-[28px]">
 		{title}
 	</h3>
 	<div
-		class="mt-2 flex gap-4 overflow-x-scroll pb-3 
-					md:mt-4 md:gap-6 md:pb-6">
+		class="mt-4 flex gap-5 overflow-x-scroll pb-4 
+					md:mt-6 md:gap-6 md:pb-6">
 		<slot />
 	</div>
 </section>
