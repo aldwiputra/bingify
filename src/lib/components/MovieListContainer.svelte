@@ -3,8 +3,8 @@
 </script>
 
 <section
-	class="lg:mt-15 mt-10 
-				pl-4 md:mt-12 md:pl-0">
+	class="mt-10 pl-4 
+				md:mt-14 md:pl-0 lg:mt-16">
 	<h3
 		class="text-xl font-bold text-gray-200 
 					md:text-2xl">
