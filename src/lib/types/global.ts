@@ -28,4 +28,27 @@ export type Movie = {
 	vote_count: number;
 };
 
+export type TvShowData = {
+	page: number;
+	results: TvShow[];
+	total_pages: number;
+	total_results: number;
+};
+
+export type TvShow = {
+	backdrop_path: string;
+	first_air_date: string;
+	genre_ids: number[];
+	id: number;
+	name: string;
+	origin_country: string[];
+	original_language: string;
+	original_name: string;
+	overview: string;
+	popularity: number;
+	poster_path: string;
+	vote_average: number;
+	vote_count: number;
+};
+
 export type OriginalLanguage = 'en' | 'ru' | 'no';

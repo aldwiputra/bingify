@@ -1,15 +1,19 @@
 <script lang="ts">
-	import type { Movie } from '$lib/types/global';
+	import type { Movie, TvShow } from '$lib/types/global';
 
-	export let data: Movie;
+	function isMovie(obj: Movie | TvShow): obj is Movie {
+		return 'title' in obj && 'adult' in obj && 'release_date' in obj;
+	}
+
+	export let data: Movie | TvShow;
 </script>
 
-<article class="pt-2 pl-2">
+<article class="flex-1 pt-2 pl-2 pr-2">
 	<a
 		href="#"
 		class="relative block overflow-hidden rounded-md outline-2 outline-offset-4 outline-gray-400 hover:outline">
 		<img
-			class="min-w-[7.5rem]  sm:min-w-[8rem] md:min-w-[10rem] lg:min-w-[11rem]"
+			class="w-full min-w-[7.5rem] sm:min-w-[8rem] md:min-w-[10rem] lg:min-w-[11rem]"
 			src={`https://image.tmdb.org/t/p/w185${data.poster_path}`}
 			alt="" />
 
@@ -27,20 +31,28 @@
 		</span>
 	</a>
 
-	<a href="#" class="group" title={data.title}>
+	<a href="#" class="group" title={isMovie(data) ? data.title : data.name}>
 		<h4
 			class="mt-2 text-sm font-semibold tracking-wide text-gray-200 line-clamp-1 group-hover:text-sky-500 md:mt-3 lg:text-base">
-			{data.title}
+			{isMovie(data) ? data.title : data.name}
 		</h4>
 	</a>
 	<div
 		class="mt-1 flex items-center gap-1 text-[10px] font-thin tracking-wide text-gray-200 sm:gap-1.5 sm:text-[11px] lg:text-xs">
 		<p>
-			{data.adult ? 'R' : 'PG-13'}
+			{#if isMovie(data)}
+				{data.adult ? 'R' : 'PG-13'}
+			{:else}
+				N/A
+			{/if}
 		</p>
 		<span>•</span>
 		<p class="tracking-wide">
-			({data.release_date.split('-')[0]})
+			{#if isMovie(data)}
+				({data.release_date.split('-')[0]})
+			{:else}
+				({data.first_air_date.split('-')[0]})
+			{/if}
 		</p>
 	</div>
 </article>
