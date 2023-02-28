@@ -58,15 +58,12 @@
 						} ${'flex aspect-square items-center rounded-md p-2'} ${
 							$page.url.pathname === url ? '' : 'hover:bg-gray-400/10'
 						}`}
+						title={label}
 						href={url}>
 						<Icon
 							type={label}
-							mainColor={$page.url.pathname === url
-								? 'fill-red-400'
-								: 'fill-gray-400'}
-							accentColor={$page.url.pathname === url
-								? 'fill-red-500'
-								: 'fill-gray-500'}
+							mainColor={$page.url.pathname === url ? 'fill-red-400' : 'fill-gray-400'}
+							accentColor={$page.url.pathname === url ? 'fill-red-500' : 'fill-gray-500'}
 							width="w-6 xl:w-7" />
 					</a>
 				</li>
@@ -75,10 +72,6 @@
 	</nav>
 
 	<button class="rounded-md p-2 hover:bg-gray-400/10">
-		<Icon
-			type="search"
-			mainColor="fill-gray-500"
-			accentColor="fill-gray-400"
-			width="w-6 xl:w-7" />
+		<Icon type="search" mainColor="fill-gray-500" accentColor="fill-gray-400" width="w-6 xl:w-7" />
 	</button>
 </header>

@@ -4,7 +4,7 @@
 </script>
 
 <section
-	class={`${!wrap ? 'mt-10 md:mt-14 lg:mt-16' : ''} pl-4 
+	class={`${!wrap ? 'mt-10 md:mt-14 lg:mt-16' : 'pr-4'} pl-4 
 				 md:pl-0 `}>
 	<h3
 		class="text-xl font-bold text-gray-200 
