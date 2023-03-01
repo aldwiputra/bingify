@@ -34,6 +34,11 @@
 			loading="lazy"
 			alt="" />
 
+		<!-- image placeholder -->
+		<div
+			class="absolute top-0 left-0 right-0 z-[-1] aspect-[185/278] w-full bg-gradient-to-br from-gray-400 to-gray-600" />
+		<!-- ----------------- -->
+
 		<button
 			class="pointer-events-auto absolute top-2 right-2 aspect-square h-7 w-7 cursor-pointer rounded-full bg-gray-800/70 p-[8px] backdrop-blur-sm md:h-8 md:w-8 md:p-[10px]"
 			on:click={() => {
