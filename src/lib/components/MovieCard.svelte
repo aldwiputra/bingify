@@ -27,14 +27,15 @@
 
 <article class="flex-1 pt-2 pl-2 pr-2">
 	<div
-		class=" relative block overflow-hidden rounded-md outline-2 outline-offset-4 outline-gray-400 hover:outline">
+		class="relative block overflow-hidden rounded-md outline-2 outline-offset-4 outline-gray-400 hover:outline">
 		<img
 			class="aspect-[185/278] w-full min-w-[7.5rem] sm:min-w-[8rem] md:min-w-[10rem] lg:min-w-[11rem]"
 			src={`https://image.tmdb.org/t/p/w185${data.poster_path}`}
+			loading="lazy"
 			alt="" />
 
 		<button
-			class="pointer-events-auto absolute top-2 right-2 aspect-square h-6 w-6 cursor-pointer rounded-full bg-gray-800/70 p-[8px] backdrop-blur-sm md:h-8 md:w-8 md:p-[10px]"
+			class="pointer-events-auto absolute top-2 right-2 aspect-square h-7 w-7 cursor-pointer rounded-full bg-gray-800/70 p-[8px] backdrop-blur-sm md:h-8 md:w-8 md:p-[10px]"
 			on:click={() => {
 				bookmarkHandler(data.id.toString());
 			}}>
@@ -46,7 +47,7 @@
 			</svg>
 		</button>
 
-		<span
+		<!-- <span
 			class="outline-solid absolute top-2 left-2 flex items-center gap-1 rounded-[4px] bg-gray-800/80 p-1.5 outline outline-1 outline-gray-500/50 backdrop-blur-sm md:rounded-md md:p-2">
 			<svg class="w-2 md:w-2.5" viewBox="0 0 39 38" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path
@@ -57,7 +58,7 @@
 				class="block text-[10px] font-normal leading-none tracking-wide text-gray-200 md:text-[11px]">
 				{data.vote_average}
 			</span>
-		</span>
+		</span> -->
 	</div>
 
 	<a href="#" class="group" title={isMovie(data) ? data.title : data.name}>

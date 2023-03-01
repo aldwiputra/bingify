@@ -2,7 +2,6 @@
 	import type { Movie } from '$lib/types/global';
 
 	export let mainMovie: Movie;
-	console.log(mainMovie.adult);
 </script>
 
 <div class="grid max-h-[24rem] grid-cols-1 grid-rows-1 overflow-hidden md:rounded-lg">
