@@ -23,14 +23,15 @@
 
 	onMount(() => {
 		isBookmarked = window.localStorage.getItem(data.id.toString()) ? true : false;
-		document.addEventListener(
-			`${data.id}Change`,
-			() => {
-				isBookmarked = window.localStorage.getItem(data.id.toString()) ? true : false;
-				console.log('updated');
-			},
-			false
-		);
+
+		document.addEventListener(`${data.id}Change`, () => {
+			isBookmarked = window.localStorage.getItem(data.id.toString()) ? true : false;
+			console.log('updated');
+		});
+
+		return () => {
+			document.removeEventListener(`${data.id}Change`);
+		};
 	});
 </script>
 
