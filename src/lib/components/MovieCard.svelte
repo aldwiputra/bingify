@@ -2,6 +2,8 @@
 	import type { Movie, TvShow } from '$lib/types/global';
 	import { onMount } from 'svelte';
 
+	const event = new Event('localStorageUpdated');
+
 	function isMovie(obj: Movie | TvShow): obj is Movie {
 		return 'title' in obj && 'adult' in obj && 'release_date' in obj;
 	}
@@ -10,11 +12,13 @@
 		if (isBookmarked) {
 			window.localStorage.removeItem(id);
 			isBookmarked = window.localStorage.getItem(id) ? true : false;
+			document.dispatchEvent(event);
 			return;
 		}
 
 		window.localStorage.setItem(id, JSON.stringify(data));
 		isBookmarked = window.localStorage.getItem(id) ? true : false;
+		document.dispatchEvent(event);
 	}
 
 	export let data: Movie | TvShow;
@@ -22,6 +26,14 @@
 
 	onMount(() => {
 		isBookmarked = window.localStorage.getItem(data.id.toString()) ? true : false;
+		document.addEventListener(
+			'localStorageUpdated',
+			() => {
+				isBookmarked = window.localStorage.getItem(data.id.toString()) ? true : false;
+				console.log('updated');
+			},
+			false
+		);
 	});
 </script>
 
