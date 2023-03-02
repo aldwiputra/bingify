@@ -21,18 +21,23 @@
 		document.dispatchEvent(event);
 	}
 
-	function updateLocalStorageListener() {
-		isBookmarked = window.localStorage.getItem(data.id.toString()) ? true : false;
-		console.log('updated');
+	function updateLocalStorageListener(id: string) {
+		return () => {
+			isBookmarked = window.localStorage.getItem(id) ? true : false;
+			console.log('updated');
+		};
 	}
 
 	onMount(() => {
-		updateLocalStorageListener();
+		updateLocalStorageListener(data.id.toString())();
 
-		document.addEventListener(`${data.id}Change`, updateLocalStorageListener);
+		document.addEventListener(`${data.id}Change`, updateLocalStorageListener(data.id.toString()));
 
 		return () => {
-			document.removeEventListener(`${data.id}Change`, updateLocalStorageListener);
+			document.removeEventListener(
+				`${data.id}Change`,
+				updateLocalStorageListener(data.id.toString())
+			);
 		};
 	});
 </script>
