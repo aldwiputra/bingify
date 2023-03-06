@@ -12,6 +12,6 @@
 
 <MovieListContainer title="Tv Shows" wrap={true}>
 	{#each data.tvData as tvItem}
-		<MovieCard data={tvItem} />
+		<MovieCard data={tvItem} grow={true} />
 	{/each}
 </MovieListContainer>

@@ -3,6 +3,7 @@
 	import { onMount } from 'svelte';
 
 	export let data: Movie | TvShow;
+	export let grow: boolean;
 	let isBookmarked: boolean;
 	const event = new Event(`${data.id}Change`);
 
@@ -42,7 +43,7 @@
 	});
 </script>
 
-<article class="flex-1 pt-2 pl-2 pr-2">
+<article class={`${grow ? 'flex-1' : ''} pt-2 pl-2 pr-2`}>
 	<div
 		class="relative block overflow-hidden rounded-md outline-2 outline-offset-4 outline-gray-400 hover:outline">
 		<img
@@ -85,7 +86,7 @@
 
 	<a href="#" class="group" title={isMovie(data) ? data.title : data.name}>
 		<h4
-			class="mt-2 text-sm font-semibold tracking-wide text-gray-200 line-clamp-1 group-hover:text-sky-500 md:mt-3 lg:text-base">
+			class="mt-2 max-w-[15ch] text-sm font-semibold tracking-wide text-gray-200 line-clamp-1 group-hover:text-sky-500 md:mt-3 lg:text-base">
 			{isMovie(data) ? data.title : data.name}
 		</h4>
 	</a>
