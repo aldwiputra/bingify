@@ -4,7 +4,7 @@
 	import type { Movie, TvShow } from '$lib/types/global';
 	import { onMount } from 'svelte';
 
-	let data: Movie[] | TvShow[] = [];
+	let data: (Movie | TvShow)[] = [];
 
 	function updateData() {
 		data = [];
@@ -45,7 +45,11 @@
 </svelte:head>
 
 <MovieListContainer title="Bookmarks" wrap={true}>
-	{#each data as movieItem}
-		<MovieCard data={movieItem} grow={false} />
-	{/each}
+	{#if data.length > 0}
+		{#each data as movieItem}
+			<MovieCard data={movieItem} grow={false} />
+		{/each}
+	{:else}
+		<p class="text-gray-200">No bookmarks yet 😞</p>
+	{/if}
 </MovieListContainer>
